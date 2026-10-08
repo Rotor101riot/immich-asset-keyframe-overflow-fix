@@ -1,0 +1,32 @@
+diff --git a/server/src/schema/tables/asset-av.table.ts b/server/src/schema/tables/asset-av.table.ts
+index 7f61609c3..824f4255c 100644
+--- a/server/src/schema/tables/asset-av.table.ts
++++ b/server/src/schema/tables/asset-av.table.ts
+@@ -78,21 +78,21 @@ export class AssetKeyframeTable {
+   @ForeignKeyColumn(() => AssetTable, { onDelete: 'CASCADE', primary: true })
+   assetId!: string;
+ 
+-  @Column({ type: 'integer', array: true })
++  @Column({ type: 'bigint', array: true })
+   pts!: number[];
+ 
+-  @Column({ type: 'integer', array: true })
++  @Column({ type: 'bigint', array: true })
+   accDuration!: number[];
+ 
+-  @Column({ type: 'integer', array: true })
++  @Column({ type: 'bigint', array: true })
+   ownDuration!: number[];
+ 
+-  @Column({ type: 'integer' })
++  @Column({ type: 'bigint' })
+   totalDuration!: number;
+ 
+-  @Column({ type: 'integer' })
++  @Column({ type: 'bigint' })
+   packetCount!: number;
+ 
+-  @Column({ type: 'integer' })
++  @Column({ type: 'bigint' })
+   outputFrames!: number;
+ }
